@@ -8,5 +8,17 @@ module.exports = {
   output: {
     path: path.join(__dirname, "dist"),
     filename: "bundle.js"
-  }
+  },
+  plugins: [
+    // Uglify to remove node code paths.
+    new webpack.optimize.UglifyJsPlugin({
+      // NOTE: Beautify the resuling minimized file to see results.
+      beautify: true
+    }),
+
+    // Signal webpack, not node.
+    new webpack.DefinePlugin({
+      "process.env.IS_WEBPACK": JSON.stringify(true)
+    })
+  ]
 };

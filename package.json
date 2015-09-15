@@ -1,0 +1,16 @@
+{
+  "name": "webpack-switch-loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "webpack",
+    "server": "node server/index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "raw-loader": "^0.5.1",
+    "webpack": "^1.12.1"
+  }
+}
